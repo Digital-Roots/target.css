@@ -1,0 +1,102 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@media print {
+  /* line 8, ../sass/print.scss */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  /* line 13, ../sass/print.scss */
+  *:before {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+  /* line 18, ../sass/print.scss */
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 25, ../sass/print.scss */
+  a {
+    text-decoration: underline;
+  }
+  /* line 27, ../sass/print.scss */
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 31, ../sass/print.scss */
+  pre {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 35, ../sass/print.scss */
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /* line 39, ../sass/print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 42, ../sass/print.scss */
+  tr {
+    page-break-inside: avoid;
+  }
+
+  /* line 45, ../sass/print.scss */
+  img {
+    page-break-inside: avoid;
+    max-width: 100% !important;
+  }
+
+  /* line 49, ../sass/print.scss */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 53, ../sass/print.scss */
+  h2 {
+    orphans: 3;
+    widows: 3;
+    page-break-after: avoid;
+  }
+
+  /* line 58, ../sass/print.scss */
+  h3 {
+    orphans: 3;
+    widows: 3;
+    page-break-after: avoid;
+  }
+
+  /* line 63, ../sass/print.scss */
+  a[href]:after {
+    content: "(" attr(href) ")";
+  }
+
+  /* line 66, ../sass/print.scss */
+  abbr[title]:after {
+    content: "(" attr(title) ")";
+  }
+
+  /* line 69, ../sass/print.scss */
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  /* line 72, ../sass/print.scss */
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+}
