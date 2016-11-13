@@ -2,12 +2,14 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
 @mixin modal-base($color: #d6d6bc, $padding: 20px, $text-align: center){
   background:  ‎$color;
   padding: $padding;
   text-align: $text-align;
+}
+@mixin modal-style(){
+
 }
 [id*="hide-show-"]:not(:target){
   display: none;
@@ -65,13 +67,13 @@
 }
 
 .modal-right{
-  @include modal-base($text-align: right);
+  @include modal-base($text-align: left);
    &-LG{
-     @include modal-base($text-align: right);
+     @include modal-base($text-align: left);
      width: 100%;
    }
    &-SM{
-     @include modal-base($text-align: right);
+     @include modal-base($text-align: left);
      width: 35%;
    }
 }

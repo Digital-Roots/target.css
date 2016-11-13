@@ -152,20 +152,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .modal-right {
   background: ‎ #d6d6bc;
   padding: 20px;
-  text-align: right;
+  text-align: left;
 }
 /* line 69, ../sass/screen.scss */
 .modal-right-LG {
   background: ‎ #d6d6bc;
   padding: 20px;
-  text-align: right;
+  text-align: left;
   width: 100%;
 }
 /* line 73, ../sass/screen.scss */
 .modal-right-SM {
   background: ‎ #d6d6bc;
   padding: 20px;
-  text-align: right;
+  text-align: left;
   width: 35%;
 }
 
