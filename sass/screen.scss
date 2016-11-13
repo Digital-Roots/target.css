@@ -4,7 +4,7 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "compass/reset";
 @mixin modal-base($color: #d6d6bc, $padding: 20px, $text-align: center){
-  background:  ‎$color;
+  background-color:  ‎$color;
   padding: $padding;
   text-align: $text-align;
   box-shadow: inset 0.5px 0.5px black, 0.5px 0.5px black;
