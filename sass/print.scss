@@ -2,7 +2,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
  $black: #000;
- $color_mountain_mist_approx: #999;
+ $grey: #999;
 
  @media print {
   * {
@@ -29,11 +29,11 @@
     }
   }
   pre {
-    border: 1px solid $color_mountain_mist_approx;
+    border: 1px solid $grey;
     page-break-inside: avoid;
   }
   blockquote {
-    border: 1px solid $color_mountain_mist_approx;
+    border: 1px solid $grey;
     page-break-inside: avoid;
   }
   thead {
