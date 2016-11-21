@@ -200,12 +200,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all .5s ease-in-out;
 }
 /* line 101, ../sass/screen.scss */
-#slider img:not(:target), #slider img:target ~ img[id*="slide-"] {
+#slider img:not(:target), #slider img:target ~ img#slide-4 {
   position: reslative;
   opacity: 0;
 }
-/* line 105, ../sass/screen.scss */
-#slider img[id*="slide-"] {
+/* line 106, ../sass/screen.scss */
+#slider img#slide-4 {
   position: absolute;
   opacity: 1;
 }
