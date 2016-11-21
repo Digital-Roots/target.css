@@ -4,10 +4,10 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "compass/reset";
 @mixin modal-base($color: #d6d6bc, $padding: 20px, $text-align: center){
-  background-color:  ‎$color;
+  background: ‎$color;
   padding: $padding;
   text-align: $text-align;
-  box-shadow: inset 0.5px 0.5px black, 0.5px 0.5px black;
+  border: thin solid black;
 }
 @mixin nav-style($color){
   background-color: $color;
@@ -86,4 +86,25 @@
   opacity: 1;
   visibility: visible;
   transition: opacity 1s, visibility 1s;
+}
+
+#slider{
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    &:target{
+      transition: all .5s ease-in-out;
+    }
+    &:not(:target), &:target ~ img[id*="slide-"]{
+      position: reslative;
+      opacity: 0;
+    }
+    &[id*="slide-"]{
+      position: absolute;
+      opacity: 1;
+    }
+  }
 }
