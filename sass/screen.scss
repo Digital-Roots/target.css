@@ -87,6 +87,7 @@
   visibility: visible;
   transition: opacity 1s, visibility 1s;
 }
+// View Switcher
 #slider {
   // all of this slider stuff is decorative
   display: block;
@@ -96,23 +97,115 @@
   margin: 0 auto;
   position: relative;
   background-color: #c69;
-  img{
+
+  img {
     position: absolute;
     top: 0;
     left: 0;
     width: 300px;
     height: 200px;
-    &:target{
+    transition: all .5s ease-in-out;
+
+    &:target {
       transition: all .5s ease-in-out;
     }
-    &:not(:target), &:target ~ img#slide-4{
-      position: reslative;
+
+    &:not(:target),
+    &:target ~ img#slide-4  {
+      position: relative;
       opacity: 0;
     }
-    // set initially visible
-    &#slide-4{
+
+    &#slide-4 {
       position: absolute;
       opacity: 1;
     }
   }
+
+  // nav additional styling
+  ul {
+    position: absolute;
+    top: 0;
+    left: -2em;
+    list-style: none;
+
+    li {
+      width: 1.25em;
+      height: 1.25em;
+      font-family: monospace;
+      font-size: 1.5em;
+      border-radius: 50%;
+      background: wheat;
+      text-align: center;
+      margin-top: .7em;
+
+      &:hover {
+        background: #ece;
+      }
+
+      a {
+        text-decoration: none;
+        color: #c69;
+      }
+    }
+  }
+}
+
+// in case images break
+
+#slide-1 {
+  background-color: wheat;
+}
+
+#slide-2 {
+  background-color: #eee;
+}
+
+#slide-3 {
+  background-color: #d70;
+}
+
+#slide-4 {
+  background-color: #e50;
+}
+
+// Scroll Indicator
+$scroller-height: 6px;
+$scroller-color: #c69;
+$scroller-background: #ddd;
+$body-background: white;
+
+html,body {
+    margin: 0;
+}
+
+.scroller {
+    position: fixed;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background: $body-background;
+}
+
+main {
+    margin-top: 0;
+}
+
+body {
+    background: linear-gradient(to right top,
+      $scroller-color 50%,
+      $scroller-background 50%);
+    //6px = height of scroller but calc won't work with variables
+  background-size: 100% calc(100% - 100vh +  #{-$scroller-height});
+    background-repeat: no-repeat;
+}
+
+body:before {
+    content:'';
+    position: fixed;
+    top: $scroller-height;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: $body-background;
 }

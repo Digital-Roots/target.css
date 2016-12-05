@@ -187,25 +187,120 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: opacity 1s, visibility 1s;
 }
 
-/* line 92, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
+#slider {
+  display: block;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  background-color: #c69;
+}
+/* line 101, ../sass/screen.scss */
 #slider img {
   position: absolute;
   top: 0;
   left: 0;
   width: 300px;
   height: 200px;
+  transition: all .5s ease-in-out;
 }
-/* line 98, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 #slider img:target {
   transition: all .5s ease-in-out;
 }
-/* line 101, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 #slider img:not(:target), #slider img:target ~ img#slide-4 {
-  position: reslative;
+  position: relative;
   opacity: 0;
 }
-/* line 106, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #slider img#slide-4 {
   position: absolute;
   opacity: 1;
+}
+/* line 126, ../sass/screen.scss */
+#slider ul {
+  position: absolute;
+  top: 0;
+  left: -2em;
+  list-style: none;
+}
+/* line 132, ../sass/screen.scss */
+#slider ul li {
+  width: 1.25em;
+  height: 1.25em;
+  font-family: monospace;
+  font-size: 1.5em;
+  border-radius: 50%;
+  background: wheat;
+  text-align: center;
+  margin-top: .7em;
+}
+/* line 142, ../sass/screen.scss */
+#slider ul li:hover {
+  background: #ece;
+}
+/* line 146, ../sass/screen.scss */
+#slider ul li a {
+  text-decoration: none;
+  color: #c69;
+}
+
+/* line 156, ../sass/screen.scss */
+#slide-1 {
+  background-color: wheat;
+}
+
+/* line 160, ../sass/screen.scss */
+#slide-2 {
+  background-color: #eee;
+}
+
+/* line 164, ../sass/screen.scss */
+#slide-3 {
+  background-color: #d70;
+}
+
+/* line 168, ../sass/screen.scss */
+#slide-4 {
+  background-color: #e50;
+}
+
+/* line 178, ../sass/screen.scss */
+html, body {
+  margin: 0;
+}
+
+/* line 182, ../sass/screen.scss */
+.scroller {
+  position: fixed;
+  top: 0;
+  height: 0;
+  width: 100%;
+  background: white;
+}
+
+/* line 190, ../sass/screen.scss */
+main {
+  margin-top: 0;
+}
+
+/* line 194, ../sass/screen.scss */
+body {
+  background: linear-gradient(to right top, #c69 50%, #ddd 50%);
+  background-size: 100% calc(100% - 100vh +  -6px);
+  background-repeat: no-repeat;
+}
+
+/* line 203, ../sass/screen.scss */
+body:before {
+  content: '';
+  position: fixed;
+  top: 6px;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  background: white;
 }
